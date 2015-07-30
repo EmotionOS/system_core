@@ -29,7 +29,7 @@
 
 #define __android_unused __attribute__((__unused__))
 
-#ifdef HAVE_ANDROID_OS
+#ifdef __ANDROID__
 #include <linux/ioprio.h>
 #include <sys/syscall.h>
 #include <sys/stat.h>
