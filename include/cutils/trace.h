@@ -67,7 +67,10 @@ __BEGIN_DECLS
 #define ATRACE_TAG_RS               (1<<15)
 #define ATRACE_TAG_BIONIC           (1<<16)
 #define ATRACE_TAG_POWER            (1<<17)
-#define ATRACE_TAG_LAST             ATRACE_TAG_POWER
+#define ATRACE_TAG_PACKAGE_MANAGER  (1<<18)
+#define ATRACE_TAG_SYSTEM_SERVER    (1<<19)
+#define ATRACE_TAG_DATABASE         (1<<20)
+#define ATRACE_TAG_LAST             ATRACE_TAG_DATABASE
 
 // Reserved for initialization.
 #define ATRACE_TAG_NOT_READY        (1LL<<63)
