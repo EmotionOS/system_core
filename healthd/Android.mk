@@ -13,6 +13,9 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := BatteryMonitor.cpp
 LOCAL_MODULE := libbatterymonitor
+ifneq ($(BOARD_BATTERY_REAL_INFO),false)
+LOCAL_CFLAGS := -DBATTERY_REAL_INFO
+endif
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 LOCAL_STATIC_LIBRARIES := libutils
